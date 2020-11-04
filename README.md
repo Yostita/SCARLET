@@ -9,5 +9,5 @@ NUNCA TRABAJAR DIRECTAMENTE SOBRE Main
 
 Se deberia crear una rama por cada punto conseguido.
 
-Nomenclatura: feature/JJC-X(Numero de ticket del Kanban)-nombre(funcionalidad del ticket)
+Nomenclatura: feature/SCAR-X(Numero de ticket del Kanban)-nombre(funcionalidad del ticket)
 Los espacios se separan por -
