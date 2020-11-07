@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: red;
+    background: url(../uploads/fondo.svg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#F6F7F8;
+    height:100%;
+    background-position: center center;
+}
+.card {
+    size: 20%;
+    margin: auto; /* Added */
+    float: none; /* Added */
+}
+
+button {
+    background-color: #FF3366;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+header{
+    height:auto;
+    color: white;
+    margin: 1rem;
+    text-align: center;
+}
+
+main{
+    width:100%;
+    height:100%;
+    margin: auto;
+}
+
+section{
+    height:auto;
+}
+
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
