@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+from message_control import get_reponse
 app = Flask(__name__)
 
 #Login
@@ -19,8 +19,8 @@ def profile():
 
 @app.route("/get")
 def get_scarlet_renponse():
-    #userText = request.args.get('msg')
-    return("Callate puta")
+    userText = request.args.get('msg')
+    return(get_reponse(userText))
 
 if __name__ == '__main__':
     #Mantenerlo en "debug=True" mientras estemos en fase de desarrollo
