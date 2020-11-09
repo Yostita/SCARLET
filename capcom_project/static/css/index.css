@@ -6,8 +6,8 @@
     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --msger-bg: #fff;
     --border: 2px solid #ddd;
-    --left-msg-bg: #ececec;
-    --right-msg-bg: #579ffb;
+    --left-msg-bg:#FF3366;
+    --right-msg-bg: #20a4f3;
 }
 
 html {
@@ -61,6 +61,7 @@ body {
     width: 700px;
     height: 650px;
     text-align: initial;
+    border-radius: 2rem;
 }
 
 .msger {
@@ -75,6 +76,7 @@ body {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.790);
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
 .msger-chat {
@@ -129,6 +131,7 @@ body {
     padding: 15px;
     border-radius: 15px;
     background: var(--left-msg-bg);
+    color: #fff;
 }
 
 .msg-info {
@@ -143,12 +146,14 @@ body {
     font-weight: bold;
 }
 
+
 .msg-info-time {
     font-size: 0.85em;
 }
 
 .left-msg .msg-bubble {
     border-bottom-left-radius: 0;
+    background: var(--left-msg-bg);
 }
 
 .right-msg {
@@ -157,7 +162,6 @@ body {
 
 .right-msg .msg-bubble {
     background: var(--right-msg-bg);
-    color: #fff;
     border-bottom-right-radius: 0;
 }
 .right-msg .msg-img {
@@ -170,6 +174,8 @@ body {
     border-top: var(--border);
     background: #eee;
     align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .msger-inputarea * {
     border: none;
@@ -183,7 +189,7 @@ body {
 }
 .msger-send-btn {
     margin-left: 10px;
-    background: rgb(0, 196, 65);
+    background: #011627;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -191,7 +197,23 @@ body {
     width: 35px;
     height: 35px;
     max-width: 5%;
+    outline: none;
 }
 .msger-send-btn:hover {
-    background: rgb(0, 180, 50);
+    background: #3a5c77;
 } 
+.msger-send-btn:active {
+    background: #011627;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+} 
+
+input[type=text]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    height: 2.5rem;
+}
