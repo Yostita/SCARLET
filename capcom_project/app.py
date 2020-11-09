@@ -8,7 +8,7 @@ def login():
     return render_template('login.html')
 
 #Chat
-@app.route('/main',)
+@app.route('/main')
 def index():
     return render_template('index.html')
 
