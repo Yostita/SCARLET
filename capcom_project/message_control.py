@@ -1,4 +1,5 @@
 def get_reponse (msg):
+    """
     if msg == "Hola" or msg == "hola" :
         return "Como estas?"
     if msg == "Como te llamas?":
@@ -7,3 +8,5 @@ def get_reponse (msg):
         return "La verdad es que para ser un streamer de exito es bastante sexy"
     else:
         return "Callate un rato anda"
+    """
+    

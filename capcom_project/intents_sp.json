@@ -1,0 +1,37 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns":[
+                "hola",
+                "buenas",
+                "buenos dias"
+            ],
+            "responses":[
+                "Hola, que tal estas",
+                "Buenas",
+                "Buenos dias"
+            ]
+        },
+        {
+            "tag": "despedida",
+            "patterns":[
+                "adios",
+                "hasta luego"
+            ],
+            "responses":[
+                "Adios, que tengas un buen dia",
+                "Xaoooo"
+            ]
+        },
+        {
+            "tag": "presentacion",
+            "patterns":[
+                "Como te llamas?"
+            ],
+            "responses":[
+                "Mi nombre es SCARLETT"
+            ]
+        }
+    ]
+}
