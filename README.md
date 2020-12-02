@@ -16,8 +16,12 @@ NUNCA TRABAJAR DIRECTAMENTE SOBRE Main
 
 Se deberia crear una rama por cada punto conseguido.
 
-NOMENCLATURA 
+**Nomenclatura**
 
-feature/SCAR-X(Numero de ticket del Kanban)-nombre(funcionalidad del ticket)
+- style/ : si es algo de diseño
+- bugfix/ : resolucion de errores
+- feature/ : nuevo desarrollo
+
+Ejemplo: feature/SCAR-X(Numero de ticket del Kanban)-nombre(funcionalidad del ticket)
 
 Los espacios se separan por -
