@@ -47,10 +47,6 @@ header{
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.03em;
-}
-
-
-.deconstructed{
     animation: glitch 1s linear infinite;
 }
 
@@ -165,11 +161,6 @@ header{
     transform: translate3d(25%, 0, 0);
 }
 
-input, button {
-    letter-spacing: -0.2px;
-    font-size: 16px;
-}
-
 button, input {
     border: 0;
     outline: 0;
@@ -179,9 +170,11 @@ button, input {
     color: var(--text-color);
     background-color: var(--bg-color);
     margin-top: 16px;
+    letter-spacing: -0.2px;
+    font-size: 16px;
 }
 
-.input{
+.input {
     display: block;
     margin-bottom: 24px;
     width: 100%;
@@ -199,7 +192,7 @@ input {
 input:focus {
     box-shadow:  inset 1px 1px 2px  var(--shadow-color), inset -1px -1px 2px var(--enfasis-color);
 }
-  
+
 button {
     box-shadow: -5px -5px 17px var(--enfasis-color),  5px 5px 17px  var(--shadow-color);
     transition: all 0.2s ease-in-out;
