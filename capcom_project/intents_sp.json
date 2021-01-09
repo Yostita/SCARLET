@@ -14,6 +14,27 @@
             ]
         },
         {
+            "tag": "script_hora",
+            "patterns":[
+                "que hora es",
+                "dime la hora",
+                "me podrias decir que hora es"
+            ],
+            "responses":[
+                "script_hora"
+            ]
+        },
+        {
+            "tag": "script_numero_aleatorio",
+            "patterns":[
+                "dime un numero aleatorio",
+                "numero aleatorio"
+            ],
+            "responses":[
+                "script_numero_aleatorio"
+            ]
+        },
+        {
             "tag": "despedida",
             "patterns":[
                 "adios",

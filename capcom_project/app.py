@@ -3,6 +3,7 @@ import random
 import json
 import torch
 from model import NeuralNet
+from script_manager import script_response
 from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -61,11 +62,16 @@ def get_scarlet_renponse():
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
-
+                # Comprueba si es una funcion
+                if "script" in tag:
+                    return script_response(random.choice(intent['responses']))
+                else:
+                    return random.choice(intent['responses'])
+    
     return "Lo siento, no te he entendido"
 
 
