@@ -3,7 +3,7 @@ import random
 import json
 import torch
 from sentimientos import update_sentimiento
-from files_manager import reset_variables, get_valor
+from files_manager import reset_variables, get_valor, update_file_acierto, update_file_error
 from model import NeuralNet
 from script_manager import script_response
 from nltk_utils import bag_of_words, tokenize
@@ -26,13 +26,13 @@ def profile():
 
 @app.route("/get")
 def get_scarlet_renponse():
-    sentence = request.args.get('msg')
+    mensaje = request.args.get('msg')
 
-    if sentence == "quit":
+    if mensaje == "quit":
         return 'Adiós putoooo'
 
-    sentence = tokenize(sentence)
-    x = bag_of_words(sentence, all_words)
+    mensaje = tokenize(mensaje)
+    x = bag_of_words(mensaje, all_words)
     x = x.reshape(1, x.shape[0])
     x = torch.from_numpy(x).to(device)
 
@@ -47,6 +47,7 @@ def get_scarlet_renponse():
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+                update_file_acierto(tag, prob.item(), mensaje)
                 # Comprueba si es una funcion
                 if "script" in tag:
                     return script_response(random.choice(intent['responses']))
@@ -54,7 +55,8 @@ def get_scarlet_renponse():
                     update_sentimiento(tag)
                     print("Sentimiento actual: " + str(get_valor("sentimientos")))
                     return random.choice(intent['responses'])
-    
+
+    update_file_error(tag, prob.item(), mensaje)
     return "Lo siento, no te he entendido"
 
 
