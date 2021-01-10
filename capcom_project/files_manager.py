@@ -38,3 +38,11 @@ def update_variable(variable, nuevoValor):
     file.seek(0)
     file.writelines(texto)
     file.close()
+
+def update_file_acierto(tag, probabilidad, mensaje):
+    with open("./static/files/mensajes_acierto", "a") as file:
+       file.write(f"{tag} , {probabilidad} , {mensaje}\n")
+
+def update_file_error(tag, probabilidad, mensaje):
+    with open("./static/files/mensajes_error", "a") as file:
+       file.write(f"{tag} , {probabilidad} , {mensaje}\n")
