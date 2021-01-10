@@ -51,10 +51,10 @@ def get_scarlet_renponse():
                 # Comprueba si es una funcion
                 if "script" in tag:
                     return script_response(random.choice(intent['responses']))
-                else:
-                    update_sentimiento(tag)
-                    print("Sentimiento actual: " + str(get_valor("sentimientos")))
-                    return random.choice(intent['responses'])
+                
+                update_sentimiento(tag)
+                print("Sentimiento actual: " + str(get_valor("sentimientos")))
+                return random.choice(intent['responses'])
 
     update_file_error(tag, prob.item(), mensaje)
     return "Lo siento, no te he entendido"

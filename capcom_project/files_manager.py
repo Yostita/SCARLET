@@ -1,4 +1,6 @@
 import os
+import json
+from nltk.tokenize.treebank import TreebankWordDetokenizer
 
 #Reinicia todos los valores de las variables globales
 def reset_variables():
@@ -40,6 +42,18 @@ def update_variable(variable, nuevoValor):
     file.close()
 
 def update_file_acierto(tag, probabilidad, mensaje):
+    #Actualiza su diccionario si no tiene almacenadado ese patron
+    with open('intents_sp.json', 'r+') as json_data:
+        intents = json.load(json_data)
+
+    for intent in intents['intents']:
+        if tag == intent["tag"]:
+            if TreebankWordDetokenizer().detokenize(mensaje) not in intent['patterns']:
+                intent['patterns'].append(TreebankWordDetokenizer().detokenize(mensaje))
+                #Actualiza el json
+                with open('intents_sp.json', 'w') as f:
+                    json.dump(intents, f, indent=4)
+
     with open("./static/files/mensajes_acierto", "a") as file:
        file.write(f"{tag} , {probabilidad} , {mensaje}\n")
 

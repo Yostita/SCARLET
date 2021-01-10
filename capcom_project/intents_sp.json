@@ -2,12 +2,12 @@
     "intents": [
         {
             "tag": "saludo",
-            "patterns":[
+            "patterns": [
                 "hola",
                 "buenas",
                 "buenos dias"
             ],
-            "responses":[
+            "responses": [
                 "Hola, que tal estas",
                 "Buenas",
                 "Buenos dias"
@@ -15,61 +15,65 @@
         },
         {
             "tag": "script_hora",
-            "patterns":[
+            "patterns": [
                 "que hora es",
                 "dime la hora",
                 "me podrias decir que hora es"
             ],
-            "responses":[
+            "responses": [
                 "script_hora"
             ]
         },
         {
             "tag": "script_numero_aleatorio",
-            "patterns":[
+            "patterns": [
                 "dime un numero aleatorio",
                 "numero aleatorio"
             ],
-            "responses":[
+            "responses": [
                 "script_numero_aleatorio"
             ]
         },
         {
             "tag": "cumplido",
-            "patterns":[
+            "patterns": [
                 "guapa",
-                "preciosa"
+                "preciosa",
+                "muy guapa",
+                "eres muy guapa",
+                "me pareces muy guapa"
             ],
-            "responses":[
+            "responses": [
                 "Ui, pero que cosas mas bonitas me dices",
                 "Bonbon"
             ]
         },
         {
             "tag": "insulto",
-            "patterns":[
+            "patterns": [
                 "hija de puta",
-                "me cago en tus muertos"
+                "me cago en tus muertos",
+                "eres una hija de puta"
             ],
-            "responses":[
+            "responses": [
                 "Sorry, i dont speak Taco Bell"
             ]
         },
         {
             "tag": "presentacion",
-            "patterns":[
-                "Como te llamas?"
+            "patterns": [
+                "como te llamas?"
             ],
-            "responses":[
+            "responses": [
                 "Mi nombre es SCARLETT"
             ]
         },
         {
             "tag": "prueba",
-            "patterns":[
-                "Prueba"
+            "patterns": [
+                "prueba"
             ],
-            "responses":[
+            "responses": [
                 "Test"
             ]
         }
