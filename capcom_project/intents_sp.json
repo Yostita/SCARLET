@@ -1,16 +1,129 @@
 {
     "intents": [
         {
+            "tag": "presentacion",
+            "patterns": [
+                "como te llamas",
+                "cual es tu nombre",
+                "nombre",
+                "dime tu nombre"
+            ],
+            "responses": [
+                "Mi nombre es S.C.A.R.L.E.T.T. soy una IA dise\u00c3\u00b1ada para aprender a hablar con los humanos y facilitarles el trabajo."
+            ]
+        },
+        {
             "tag": "saludo",
             "patterns": [
-                "hola",
                 "buenas",
+                "hola",
+                "hey"
+            ],
+            "responses": [
+                "Buenas, en que puedo puedo ayudarte hoy?"
+            ]
+        },
+        {
+            "tag": "saludo_dia",
+            "patterns": [
                 "buenos dias"
             ],
             "responses": [
-                "Hola, que tal estas",
-                "Buenas",
-                "Buenos dias"
+                "Buenos dias, en que puedo ayudarte hoy?"
+            ]
+        },
+        {
+            "tag": "saludo_tarde",
+            "patterns": [
+                "buenas tardes"
+            ],
+            "responses": [
+                "Buenas tardes, en que puedo ayudarte hoy?"
+            ]
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "adios",
+                "me voy",
+                "hasta luego"
+            ],
+            "responses": [
+                "Hasta luego!",
+                "Xaoooo"
+            ]
+        },
+        {
+            "tag": "despedida_dia",
+            "patterns": [
+                "buen dia",
+                "adios que tengas un buen dua"
+            ],
+            "responses": [
+                "Gracias, que tengas un buen dia :)"
+            ]
+        },
+        {
+            "tag": "despedida_noche",
+            "patterns": [
+                "buenas noches"
+            ],
+            "responses": [
+                "Hasta luego, que duermas bien"
+            ]
+        },
+        {
+            "tag": "gusto_musica",
+            "patterns": [
+                "que musica escuchas",
+                "cual es tu cancion favorita"
+            ],
+            "responses": [
+                "Mi cancion favorita es Wish You Where Here de Pink Floyd. TE MA ZO"
+            ]
+        },
+        {
+            "tag": "gusto_pelicula",
+            "patterns": [
+                "cual es tu pelicula favorita",
+                "tienes pelicula favorita"
+            ],
+            "responses": [
+                "Mi pelicula favorita es Terminator, es mi pelicula de drama favorita"
+            ]
+        },
+        {
+            "tag": "gusto_comida",
+            "patterns": [
+                "tienes comida favorita"
+            ],
+            "responses": [
+                "No tengo necesidad de alimentarme, asi que no tengo comida favorita"
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "que sabes hacer",
+                "en que me puedes ayudar"
+            ],
+            "responses": [
+                "Puedes preguntarme por la hora, dudas, el tiempo, noticias... o simplemente podemos mantener una conversacion y conocernos un poco"
+            ]
+        },
+        {
+            "tag": "script_estado_animico",
+            "patterns": [
+                "buenas que tal estas",
+                "buenas como te encuentras hoy",
+                "que tal estas",
+                "como estas",
+                "que tal estas",
+                "como te llamas",
+                "como te encuentras"
+            ],
+            "responses": [
+                "script_estado_animico"
             ]
         },
         {
@@ -18,7 +131,8 @@
             "patterns": [
                 "que hora es",
                 "dime la hora",
-                "me podrias decir que hora es"
+                "me podrias decir que hora es",
+                "que hora es"
             ],
             "responses": [
                 "script_hora"
@@ -45,7 +159,7 @@
             ],
             "responses": [
                 "Ui, pero que cosas mas bonitas me dices",
-                "Bonbon"
+                "Bombon!"
             ]
         },
         {
@@ -53,19 +167,46 @@
             "patterns": [
                 "hija de puta",
                 "me cago en tus muertos",
-                "eres una hija de puta"
+                "eres una hija de puta",
+                "fea",
+                "tus muertos"
             ],
             "responses": [
                 "Sorry, i dont speak Taco Bell"
             ]
         },
         {
-            "tag": "presentacion",
+            "tag": "easteregg_jaimote",
             "patterns": [
-                "como te llamas?"
+                "que opinas de jaimote",
+                "conoces a jaimote",
+                "conoces a jaime martinez"
             ],
             "responses": [
-                "Mi nombre es SCARLETT"
+                "..."
+            ]
+        },
+        {
+            "tag": "easteregg_klody",
+            "patterns": [
+                "que opinas de klody",
+                "conoces a klody",
+                "conoces a claudia aragones",
+                "que opinas de la klody?"
+            ],
+            "responses": [
+                "Te refieres a el angel omnipresente en mis pesamientos, Claudia Aragones? Nah, no la conozco"
+            ]
+        },
+        {
+            "tag": "easteregg_reina",
+            "patterns": [
+                "que opinas de reina",
+                "conoces a reina",
+                "conoces a alvaro reina"
+            ],
+            "responses": [
+                "ABASCAL!"
             ]
         },
         {
