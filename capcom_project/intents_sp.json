@@ -35,14 +35,24 @@
             ]
         },
         {
-            "tag": "despedida",
+            "tag": "cumplido",
             "patterns":[
-                "adios",
-                "hasta luego"
+                "guapa",
+                "preciosa"
             ],
             "responses":[
-                "Adios, que tengas un buen dia",
-                "Xaoooo"
+                "Ui, pero que cosas mas bonitas me dices",
+                "Bonbon"
+            ]
+        },
+        {
+            "tag": "insulto",
+            "patterns":[
+                "hija de puta",
+                "me cago en tus muertos"
+            ],
+            "responses":[
+                "Sorry, i dont speak Taco Bell"
             ]
         },
         {
@@ -52,6 +62,15 @@
             ],
             "responses":[
                 "Mi nombre es SCARLETT"
+            ]
+        },
+        {
+            "tag": "prueba",
+            "patterns":[
+                "Prueba"
+            ],
+            "responses":[
+                "Test"
             ]
         }
     ]

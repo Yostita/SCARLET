@@ -4,7 +4,7 @@ from datetime import datetime
 
 def script_response(script):
     if script == "script_hora":
-        return ("Son las" + datetime.time())
+        return ("Son las" + str(datetime.time()))
     
     if script == "script_numero_aleatorio":
         return str(random.randrange(100))
