@@ -17,3 +17,4 @@ def update_sentimiento(tag):
         update_variable("sentimientos", -3)
     if tag == "prueba":
         update_variable("prueba", 1)
+    #Se podrian añadir muchos mas pero con esto sirve para el ejemplo de simulacion de sentimientos
