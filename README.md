@@ -8,6 +8,9 @@ Scarlet es una red neuronal prealimentada, lo cual quiere decir que las conexion
 
 El programa esta compuesto por un servidor hecho en DJango el cual realiza la gestion tanto de usuarios como de mantener activo el portal web en el que se aloja la ventana de chat que se utiliza como input para la I.A. A su vez inicia el escuchador encargado de recibir el mensaje del usario para que este pase por el flujo de analisis de mensaje y mas tarde dar una respuesta.
 
+## Entrenamiento
+
+
 ## Uso
 Run
 ```console
