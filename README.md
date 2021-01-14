@@ -49,5 +49,4 @@ Algo a destacar es que tambien posee un `sistema de aprendizaje supervisado` el 
 Por último cuenta con una función de `interpretación de script` la cual analiza si el mesaje que envia el usuario podria ser una petición de alguna de las funciones que ya conoce, de ser asi activaria dicha funcion a traves del gestor de scripts [script_manager.py](script_manager.py) permitiendo asi que S.C.A.R.L.E.T.T pueda servir tambien como `herramienta de busqueda`, `hearramienta de trabajo`, `busqueda de infomación`...
 
 ```
-
 #TRABAJO REALIZADO POR JOSÉ LUIS BELLOSTA & LUIS CRESPO
