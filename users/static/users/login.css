@@ -1,0 +1,120 @@
+.card-form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.segment {
+    color: var(--text-color);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+.foot {
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+span, ul {
+    display: block;
+    font-size: 13px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.toggle {
+    isolation: isolate;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+      -8px -4px 8px 0 var(--enfasis-color),
+      8px 4px 12px 0 var(--shadow-color),
+      4px 4px 4px 0 var(--shadow-color) inset,
+      -4px -4px 4px 0 var(--enfasis-color) inset;
+}
+
+.toggle-state {
+    display: none;
+}
+
+.indicator {
+    height: 100%;
+    width: 200%;
+    background: var(--text-color);
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+    box-shadow:
+      -8px -4px 8px 0 var(--shadow-color),
+      8px 4px 12px 0 var(--shadow-color);
+}
+
+.toggle-state:checked ~ .indicator {
+    transform: translate3d(25%, 0, 0);
+}
+
+button, input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin-top: 10px;
+    letter-spacing: -0.2px;
+    width: 100%;
+}
+
+.input {
+    display: block;
+    margin-bottom: 24px;
+}
+
+input {
+    box-shadow:  inset 2px 2px 5px  var(--shadow-color), inset -5px -5px 10px var(--enfasis-color);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    box-shadow:  inset 1px 1px 2px  var(--shadow-color), inset -1px -1px 2px var(--enfasis-color);
+}
+
+button {
+    box-shadow: -5px -5px 17px var(--enfasis-color),  5px 5px 17px  var(--shadow-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    box-shadow: -2px -2px 3px var(--enfasis-color), 2px 2px 3px  var(--shadow-color);
+}
+
+button:active {
+    box-shadow: inset 1px 1px 2px  var(--shadow-color), inset -1px -1px 2px var(--enfasis-color);
+}
+
+.separator {
+    margin-top: 16px;
+}
+
+.google{
+    display: flex;
+}
+
+.google p{
+    margin: auto;
+}

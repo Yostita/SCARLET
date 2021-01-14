@@ -1,0 +1,20 @@
+{% extends 'scarlett/base.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static "users/login.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class='card-form'>
+        <div class="segment">
+            <h1>Registrate</h1>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrarse</button>
+        </form>
+        <p class="foot">¿Ya tienes una cuenta? <a href="{% url 'login' %}"><b>Entra aquí</b></a></p>
+    </div>
+{% endblock content %}

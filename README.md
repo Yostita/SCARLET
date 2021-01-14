@@ -1,3 +1,4 @@
+# Scarlett
 PROCESO DE TRABAJO
   1. Crear una rama apartir de la main
   2. Hacemos un PULL de la rama que hemos creado a nuestro local (Aplicar todos los cambios solo a esa rama)
