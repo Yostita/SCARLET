@@ -4,7 +4,7 @@ que para nosotros seria una conversación normal y a su vez puede realizar diver
 por Internet, ayuda con un codigo, el tiempo en tu zona o un simple calculo matematico.
 
 ## Estructura y Funcionamiento
-Scarlet es una `red neuronal prealimentada`, lo cual quiere decir que las conexiones entre sus unidades no forman un ciclo. En esta red, la información se mueve en una única dirección: adelante. De los nodos de entrada, a través de sus 2 hidden layers hacia los nodos de salida. Al tratarse de una red prealimentada no tiene ninguna forma de aumentar su red a mientras este activa por lo que para darle un poco de autonomia hemos creado una funcion la cual aumenta automaticamente su numero de `patterns` con los mensajes del usario que superan el corte de 75% de probabilidad. Gracias a esta función S.C.A.R.L.E.T.T es capaz de poder aumentar considerablemente su analisis de la conversación con el usuario.
+Scarlet es una `red neuronal prealimentada`, lo cual quiere decir que las conexiones entre sus unidades no forman un ciclo. En esta red, la información se mueve en una única dirección: adelante. De los nodos de entrada, a través de sus 2 hidden layers hacia los nodos de salida. Al tratarse de una red prealimentada no tiene ninguna forma de aumentar su red mientras esta esté activa por lo que para darle un poco de autonomia hemos creado una funcion la cual aumenta automaticamente su numero de `patterns` con los mensajes del usario que superan el corte de 75% de probabilidad. Gracias a esta función S.C.A.R.L.E.T.T es capaz de poder aumentar considerablemente su analisis de la conversación con el usuario.
 
 ![alt text](https://github.com/Yostita/SCARLET/blob/main/Red%20Neuronal.png)
 
@@ -22,6 +22,11 @@ python train.py
 Esto generara el fichero `data.pth`. Después ejecutamos
 ```console
 python manage.py runserver
+```
+Al tener control de usuarios hay que loguearse con un usuario y contraseña ya que dependiendo del usuario te trata de una forma diferente.
+```console
+user: scarlett
+psw: @Scarlett1210
 ```
 ## Personalización
 Si analizamos [intents_sp.json](intents_sp.json). Se pueden editar las respuestas de S.C.A.R.L.E.T.T. Simplemente define un nuevo `tag`, posibles `patterns`, y posibles `responses`. Tienes que volver a ejecutar el entrenamiento para que se guarden las modificaciones.
