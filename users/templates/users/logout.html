@@ -1,0 +1,15 @@
+{% extends 'scarlett/base.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static "users/login.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class='card-form'>
+        <div class="segment">
+            <h1>Has salido</h1>
+        </div>
+        <p class="foot">¿Desea continuar hablando? <a href="{% url 'login' %}"><b>Entra de nuevo</b></a></p>
+    </div>
+{% endblock content %}

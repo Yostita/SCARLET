@@ -1,0 +1,100 @@
+{% extends 'scarlett/base.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static "scarlett/index.css" %}">
+{% endblock %}
+
+{% block content %}
+	<div class="chat-container">
+		<div class="msger">
+			<div id="chatBox" class="msger-chat"></div>
+			<div id="userInput" class="msger-inputarea">
+                <label for="textInput"></label><input id="textInput" type="text" class="msger-input" placeholder="Escribe un mensaje"/>
+				<button id="buttonInput" class="msger-send-btn" type="submit">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24">
+						<path id="Sustracción_5" data-name="Sustracción 5" d="M926-912h0v-.008l1.684-10.1L940-924l-12.316-1.895L926-936l30,12-30,12Z" transform="translate(-926 936)"></path>
+					</svg>
+				</button>
+			</div>
+            <script>
+            function add_message() {
+                const message = {};
+                this.input = '';
+
+                //just incase
+                this.send_blank = false;
+                this.placeholder = "Send a message to the chatbot...";
+
+                fetch("/get-response/", {
+                    body: JSON.stringify({'message': message['text']}),
+                    method: 'POST'
+                    })
+                    .then(response => response.json()).then((json) => {
+                        this.messages.push(json['message'])
+                })
+            }
+
+            </script>
+
+			<script>
+				function getScarletResponse(){
+                    const rawText = $("#textInput").val();
+
+					if (!rawText) return;
+
+                    const userHtml =
+                        `
+						<div class="msg right-msg">
+						<div class="msg-bubble">
+						<div class="msg-text">${rawText}</div>
+						</div>
+						</div>
+					`;
+                    $("#textInput").val("");
+					$("#chatBox").append(userHtml);
+
+					fetch("/get-response/", {
+                        body: JSON.stringify({ 'message': rawText }),
+                        method: 'POST',
+                    })
+                    .then(response => response.json()).then((json) => {
+                        const data = json['message'];
+                        const scarletHtml =
+                            `
+                            <div class="msg left-msg">
+                            <div class="msg-bubble">
+                            <div class="msg-text">${data.text}</div>
+                            </div>
+                            </div>
+                        `;
+                        $("#chatBox").append(scarletHtml);
+                        const myDiv = document.getElementById('chatBox');
+                        myDiv.scrollTop = myDiv.scrollHeight;
+                    })
+				}
+				$("#textInput").keypress(function(e){
+					if(e.which === 13) {
+						getScarletResponse();
+					}
+				});
+				$("#buttonInput").click(function(){
+					getScarletResponse();
+				})
+			</script>
+		</div>
+
+	    <div class="profile-container">
+            <div class="profile-details">
+                <div class="profile-picture">
+                </div>
+                {{ user.username }}
+            </div>
+            <div class="settings">
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="{% url 'profile' %}">Información</a>
+                <a class="salir" href="{% url 'logout' %}"><b>Salir</b></a>
+            </div>
+        </div>
+	</div>
+{% endblock content %}

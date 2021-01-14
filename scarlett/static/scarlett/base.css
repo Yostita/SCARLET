@@ -1,0 +1,135 @@
+:root{
+    --bg-color:  #EBECF0;
+    --text-color: #000;
+    --shadow-color: #BABECC;
+    --enfasis-color: #FFF;
+
+    /* --bg-color:  #1b1b1b;
+    --text-color: #FFF;
+    --shadow-color: #313235;
+    --enfasis-color: #000;
+    */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--bg-color);
+    padding: 0;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    padding: 0 10% 20px;
+    width: 100%;
+}
+
+.box-header {
+    width: 100%;
+    border-bottom: 1px solid var(--text-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    margin: auto;
+    display: flex;
+}
+
+.links > a {
+    padding-left: 20px;
+}
+
+.deconstructed {
+    position: relative;
+    margin: 10px 0;
+    color: transparent;
+    width: 100%;
+    font-size: 2.25rem;
+}
+
+.deconstructed > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--text-color);
+    pointer-events: none;
+}
+
+.deconstructed > div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(var(--text-color) 50%, transparent 50%);
+    mask-image: linear-gradient(var(--text-color) 50%, transparent 50%);
+}
+
+.deconstructed > div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 50%, var(--text-color) 50%);
+    mask-image: linear-gradient(transparent 50%, var(--text-color) 50%);
+}
+
+.deconstructed:hover {
+    animation: glitch 1s linear infinite;
+}
+
+.deconstructed:hover div:nth-child(1) {
+    animation: glitchTop 2s linear infinite;
+}
+
+.deconstructed:hover div:nth-child(2) {
+    animation: glitchBotom 2.5s linear infinite;
+}
+
+@keyframes glitch{
+    2%,64%{
+        transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+        transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+@keyframes glitchTop{
+    2%,64%{
+        transform: translate(2px,-2px);
+    }
+    4%,60%{
+        transform: translate(-2px,2px);
+    }
+    62%{
+        transform: translate(13px,-1px) skew(-13deg);
+    }
+}
+
+@keyframes glitchBotom{
+    2%,64%{
+        transform: translate(-2px,0);
+    }
+    4%,60%{
+        transform: translate(-2px,0);
+    }
+    62%{
+        transform: translate(-22px,5px) skew(21deg);
+    }
+}
