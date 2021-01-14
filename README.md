@@ -4,17 +4,20 @@ que para nosotros seria una conversación normal y a su vez puede realizar diver
 por Internet, ayuda con un codigo, el tiempo en tu zona o un simple calculo matematico.
 
 ## Estructura
-Este programa esta compuesto por un servidor de DJango.
+Scarlet es una red neuronal prealimentada, lo cual quiere decir que las conexiones entre sus unidades no forman un ciclo. En esta red, la información se mueve en una única dirección: adelante. De los nodos de entrada, a través de sus 2 hidden layers hacia los nodos de salida.
+
+El programa esta compuesto por un servidor hecho en DJango el cual realiza la gestion tanto de usuarios como de mantener activo el portal web en el que se aloja la ventana de chat que se utiliza como input para la I.A. 
+
 ## Uso
 Run
 ```console
 python train.py
 ```
-Esto generara el fichero `data.pth`. Despues ejecutar
+Esto generara el fichero `data.pth`. Después ejecutamos
 ```console
 python manage.py runserver
 ```
-## Personalizar
+## Personalización
 Si analizamos [intents_sp.json](intents_sp.json). Se pueden editar las respuestas de S.C.A.R.L.E.T.T. Simplemente define un nuevo `tag`, posibles `patterns`, y posibles `responses`. Tienes que volver a ejecutar el entrenamiento para que se guarden las modificaciones.
 ```console
 {
