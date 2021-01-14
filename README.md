@@ -12,7 +12,7 @@ Esto generara el fichero `data.pth`. Después ejecutamos
 ```console
 python manage.py runserver
 ```
-Al tener control de usuarios hay que loguearse con un usuario y contraseña ya que dependiendo del usuario te trata de una forma diferente.
+Al tener control de usuarios es necesario loguearse ya que dependiendo del usuario te trata de una forma diferente ya que parte del entrenamiento depende del trato del usario.
 ```console
 user: scarlett
 psw: @Scarlett1210
